@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Pasta onde as mídias serão salvas (imagens, vídeos etc.)
+media_folder: "assets/images"
+# Caminho público para as mídias (como elas serão referenciadas no site)
+public_folder: "/assets/images"
+
+collections:
+  - name: "site_config"
+    label: "Configuração do Site"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/homepage.json"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição", name: "description", widget: "text" }
+          - { label: "Conteúdo", name: "content", widget: "markdown" }
