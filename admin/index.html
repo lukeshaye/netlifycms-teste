@@ -1,0 +1,287 @@
+---
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "site_config"
+    label: "Configurações do Site"
+    files:
+      - name: "general"
+        label: "Configurações Gerais"
+        file: "data/site_config.json"
+        fields:
+          - label: "Aba de Navegação"
+            name: "titulo_aba_navegacao"
+            widget: "string"
+            default: "Barbearia La Max - São Borja/RS"
+          
+          - label: "Cores Principais"
+            name: "cores"
+            widget: "object"
+            fields:
+              - {label: "Cor Primária", name: "primary_color", widget: "color", default: "#020202"}
+              - {label: "Cor Secundária", name: "secondary_color", widget: "color", default: "#EFEB5F"}
+              - {label: "Cor Terciária (Destaque)", name: "accent_color", widget: "color", default: "#BE1E31"}
+              - {label: "Cor do Texto", name: "text_color", widget: "color", default: "#020202"}
+              - {label: "Cor dos Links", name: "link_color", widget: "color", default: "#BE1E31"}
+              - {label: "Cor de Fundo", name: "background_color", widget: "color", default: "#ffffff"}
+              - {label: "Cor de Fundo do Menu", name: "menu_background", widget: "string", default: "rgba(2, 2, 2, 0.9)"}
+              - {label: "Cor de Fundo do Rodapé", name: "footer_background", widget: "color", default: "#020202"}
+              - {label: "Cor de Fundo do Body", name: "body_background", widget: "color", default: "#ffffff"}
+          
+          - label: "Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - {label: "Estilo do Menu", name: "menu_style", widget: "string", default: "background-color: rgba(2, 2, 2, 0.9);"}
+              - {label: "Cor dos Três Pontinhos", name: "tres_pontinhos_cor", widget: "string", default: "color: #EFEB5F;"}
+              - {label: "Link da Home", name: "home_link", widget: "string", default: "index.html"}
+              - {label: "Imagem da Logo", name: "logo_image", widget: "string", default: "assets/images/1.jpg"}
+              - {label: "Texto Alt da Logo", name: "logo_alt", widget: "string", default: "Barbearia La Max"}
+              - {label: "Altura da Logo", name: "logo_height", widget: "string", default: "5rem"}
+              
+              - label: "Item 1 do Menu"
+                name: "item1"
+                widget: "object"
+                fields:
+                  - {label: "Texto", name: "menu_item1_text", widget: "string", default: "Home"}
+                  - {label: "Link", name: "menu_item1_link", widget: "string", default: "index.html"}
+                  - {label: "Cor", name: "menu_item1_color", widget: "color", default: "#EFEB5F"}
+              
+              - label: "Item 2 do Menu"
+                name: "item2"
+                widget: "object"
+                fields:
+                  - {label: "Texto", name: "menu_item2_text", widget: "string", default: "Dúvidas"}
+                  - {label: "Link", name: "menu_item2_link", widget: "string", default: "index.html#faq-1-uDfHrio6NM"}
+                  - {label: "Cor", name: "menu_item2_color", widget: "color", default: "#EFEB5F"}
+              
+              - label: "Item 3 do Menu"
+                name: "item3"
+                widget: "object"
+                fields:
+                  - {label: "Texto", name: "menu_item3_text", widget: "string", default: "Endereço"}
+                  - {label: "Link", name: "menu_item3_link", widget: "string", default: "index.html#contacts-2-uDfHrio4Yq"}
+                  - {label: "Cor", name: "menu_item3_color", widget: "color", default: "#EFEB5F"}
+              
+              - label: "Links Sociais"
+                name: "social_links"
+                widget: "object"
+                fields:
+                  - {label: "Link do Telefone", name: "telefone_menu", widget: "string"}
+                  - {label: "Link do Facebook", name: "facebook", widget: "string"}
+                  - {label: "Link do Instagram", name: "instagram", widget: "string"}
+                  - {label: "Cor do Ícone do Telefone", name: "phone_icon_color", widget: "string", default: "color: #EFEB5F;"}
+                  - {label: "Cor do Ícone do Facebook", name: "facebook_icon_color", widget: "string", default: "color: #EFEB5F;"}
+                  - {label: "Cor do Ícone do Instagram", name: "instagram_icon_color", widget: "string", default: "color: #EFEB5F;"}
+              
+              - label: "Botão do Menu"
+                name: "botao"
+                widget: "object"
+                fields:
+                  - {label: "Link do Botão", name: "botao_menu", widget: "string"}
+                  - {label: "Texto do Botão", name: "texto_botao_menu", widget: "string", default: "Whatsapp"}
+                  - {label: "Cor de Fundo do Botão", name: "botao_menu_bg", widget: "string", default: "transparent"}
+                  - {label: "Cor do Botão", name: "botao_menu_color", widget: "color", default: "#BE1E31"}
+                  - {label: "Cor da Borda do Botão", name: "botao_menu_border", widget: "color", default: "#BE1E31"}
+          
+          - label: "Seção Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Opacidade do Overlay", name: "hero_overlay_opacity", widget: "string", default: "0.6"}
+              - {label: "Cor do Overlay", name: "hero_overlay_color", widget: "string", default: "rgb(2, 2, 2)"}
+              - {label: "Título", name: "hero_title", widget: "string", default: "Barbearia La Max - Cuidando de você com qualidade"}
+              - {label: "Cor do Título", name: "hero_title_color", widget: "color", default: "#EFEB5F"}
+              - {label: "Subtítulo", name: "hero_subtitle", widget: "string", default: "Cortes modernos e atendimento personalizado"}
+              - {label: "Cor do Subtítulo", name: "hero_subtitle_color", widget: "color", default: "#ffffff"}
+              - {label: "Texto do Botão", name: "hero_button_text", widget: "string", default: "Agendar Agora"}
+              - {label: "Link do Botão", name: "hero_button_link", widget: "string"}
+              - {label: "Cor do Botão", name: "hero_button_color", widget: "color", default: "#BE1E31"}
+              - {label: "Cor da Borda do Botão", name: "hero_button_border", widget: "color", default: "#BE1E31"}
+          
+          - label: "Seção de Avaliações"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "testimonials_bg", widget: "color", default: "#ffffff"}
+              - {label: "Título", name: "testimonials_title", widget: "string", default: "Avaliações"}
+              - {label: "Cor do Título", name: "testimonials_title_color", widget: "color", default: "#020202"}
+              
+              - label: "Avaliação 1"
+                name: "testimonial1"
+                widget: "object"
+                fields:
+                  - {label: "Cor de Fundo", name: "testimonial1_bg", widget: "color", default: "#f9f9f9"}
+                  - {label: "Texto", name: "testimonial1_text", widget: "string", default: "Amei ficou lindo, recomendo a todos"}
+                  - {label: "Cor do Texto", name: "testimonial1_text_color", widget: "color", default: "#020202"}
+                  - {label: "Nome", name: "testimonial1_name", widget: "string", default: "Marcos Gomes"}
+                  - {label: "Cor do Nome", name: "testimonial1_name_color", widget: "color", default: "#BE1E31"}
+              
+              - label: "Avaliação 2"
+                name: "testimonial2"
+                widget: "object"
+                fields:
+                  - {label: "Cor de Fundo", name: "testimonial2_bg", widget: "color", default: "#f9f9f9"}
+                  - {label: "Texto", name: "testimonial2_text", widget: "string", default: "Adorei o atendimento, super recomendo"}
+                  - {label: "Cor do Texto", name: "testimonial2_text_color", widget: "color", default: "#020202"}
+                  - {label: "Nome", name: "testimonial2_name", widget: "string", default: "Neiva Silva"}
+                  - {label: "Cor do Nome", name: "testimonial2_name_color", widget: "color", default: "#BE1E31"}
+              
+              - label: "Avaliação 3"
+                name: "testimonial3"
+                widget: "object"
+                fields:
+                  - {label: "Cor de Fundo", name: "testimonial3_bg", widget: "color", default: "#f9f9f9"}
+                  - {label: "Texto", name: "testimonial3_text", widget: "string", default: "mantendo a qualidade, sempre"}
+                  - {label: "Cor do Texto", name: "testimonial3_text_color", widget: "color", default: "#020202"}
+                  - {label: "Nome", name: "testimonial3_name", widget: "string", default: "Roberto Arantes"}
+                  - {label: "Cor do Nome", name: "testimonial3_name_color", widget: "color", default: "#BE1E31"}
+          
+          - label: "Seção Parallax"
+            name: "parallax"
+            widget: "object"
+            fields:
+              - {label: "Opacidade do Overlay", name: "parallax_overlay_opacity", widget: "string", default: "0.5"}
+              - {label: "Cor do Overlay", name: "parallax_overlay_color", widget: "string", default: "rgb(2, 2, 2)"}
+          
+          - label: "Seção de Diferenciais"
+            name: "metrics"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "metrics_bg", widget: "color", default: "#ffffff"}
+              
+              - label: "Diferencial 1"
+                name: "metric1"
+                widget: "object"
+                fields:
+                  - {label: "Texto", name: "metric1_text", widget: "string", default: "Temos um cacto bonito"}
+                  - {label: "Cor do Texto", name: "metric1_text_color", widget: "color", default: "#020202"}
+                  - {label: "Cor do Ícone", name: "metric1_icon_color", widget: "color", default: "#BE1E31"}
+              
+              - label: "Diferencial 2"
+                name: "metric2"
+                widget: "object"
+                fields:
+                  - {label: "Texto", name: "metric2_text", widget: "string", default: "Agora atendemos gatos barbudos"}
+                  - {label: "Cor do Texto", name: "metric2_text_color", widget: "color", default: "#020202"}
+                  - {label: "Cor do Ícone", name: "metric2_icon_color", widget: "color", default: "#BE1E31"}
+              
+              - label: "Diferencial 3"
+                name: "metric3"
+                widget: "object"
+                fields:
+                  - {label: "Texto", name: "metric3_text", widget: "string", default: "Bora coratar esses cabelo"}
+                  - {label: "Cor do Texto", name: "metric3_text_color", widget: "color", default: "#020202"}
+                  - {label: "Cor do Ícone", name: "metric3_icon_color", widget: "color", default: "#BE1E31"}
+          
+          - label: "Seção CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "cta_section_bg", widget: "color", default: "#020202"}
+              - {label: "Texto do Botão", name: "botao_agendar_text", widget: "string", default: "Agendar Agora"}
+              - {label: "Link do Botão", name: "botao_agendar_link", widget: "string"}
+              - {label: "Cor de Fundo do Botão", name: "botao_agendar_bg", widget: "color", default: "#BE1E31"}
+              - {label: "Cor do Texto do Botão", name: "botao_agendar_text_color", widget: "color", default: "#ffffff"}
+              - {label: "Raio da Borda do Botão", name: "botao_agendar_radius", widget: "string", default: "50px"}
+              - {label: "Padding do Botão", name: "botao_agendar_padding", widget: "string", default: "15px 200px"}
+              - {label: "Tamanho da Fonte do Botão", name: "botao_agendar_font_size", widget: "string", default: "1.2rem"}
+              - {label: "Cor de Hover do Botão", name: "botao_agendar_hover", widget: "color", default: "#d01c2d"}
+          
+          - label: "Seção de Contato"
+            name: "contacts"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "contacts_bg", widget: "color", default: "#ffffff"}
+              - {label: "Título", name: "contacts_title", widget: "string", default: "Contato"}
+              - {label: "Cor do Título", name: "contacts_title_color", widget: "color", default: "#020202"}
+              - {label: "Cor do Texto", name: "contacts_text_color", widget: "color", default: "#020202"}
+              
+              - {label: "Label do Telefone", name: "contact_phone_label", widget: "string", default: "Telefone:"}
+              - {label: "Telefone", name: "contact_phone", widget: "string", default: "055996238257"}
+              - {label: "Label do WhatsApp", name: "contact_whatsapp_label", widget: "string", default: "WhatsApp:"}
+              - {label: "WhatsApp", name: "contact_whatsapp", widget: "string", default: "assdwawdwrfe"}
+              - {label: "Label do Endereço", name: "contact_address_label", widget: "string", default: "Endereço:"}
+              - {label: "Endereço", name: "contact_address", widget: "string", default: "R. Gen. Osório, 1402 - Centro, São Borja - RS, 97670-000"}
+              - {label: "Label do Horário", name: "contact_hours_label", widget: "string", default: "Horário de Funcionamento:"}
+              - {label: "Horário", name: "contact_hours", widget: "string", default: "Seg a Sex: 9h - 19h | Sáb: 9h - 15h"}
+              
+              - {label: "Iframe do Google Maps", name: "google_maps_embed", widget: "text", default: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.005984782044!2d-50.776233!3d-29.6616007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519193bb854ae81%3A0xe4efc783e26aaf44!2sLoja%20HM%20%7C%20Loja%20de%20Roupas%20Feminino%20e%20Masculino!5e0!3m2!1spt-BR!2sbr!4v1741651328073!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'}
+          
+          - label: "Seção Social"
+            name: "social"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "social_bg", widget: "color", default: "#ffffff"}
+              - {label: "Link do Facebook", name: "facebook_link", widget: "string"}
+              - {label: "Cor de Fundo do Facebook", name: "facebook_bg", widget: "color", default: "#020202"}
+              - {label: "Cor do Ícone do Facebook", name: "facebook_icon_color", widget: "color", default: "#ffffff"}
+              - {label: "Link do Instagram", name: "instagram_link", widget: "string"}
+              - {label: "Cor de Fundo do Instagram", name: "instagram_bg", widget: "color", default: "#020202"}
+              - {label: "Cor do Ícone do Instagram", name: "instagram_icon_color", widget: "color", default: "#ffffff"}
+          
+          - label: "Seção FAQ"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "faq_bg", widget: "color", default: "#ffffff"}
+              - {label: "Título", name: "faq_title", widget: "string", default: "Perguntas Frequentes"}
+              - {label: "Cor do Título", name: "faq_title_color", widget: "color", default: "#020202"}
+              
+              - label: "Pergunta 1"
+                name: "faq1"
+                widget: "object"
+                fields:
+                  - {label: "Pergunta", name: "faq1_question", widget: "string", default: "Quais serviços vocês oferecem?"}
+                  - {label: "Cor da Pergunta", name: "faq1_question_color", widget: "color", default: "#020202"}
+                  - {label: "Resposta", name: "faq1_answer", widget: "string", default: "Oferecemos cortes de cabelo, cuidados com a barba e produtos masculinos."}
+                  - {label: "Cor da Resposta", name: "faq1_answer_color", widget: "color", default: "#020202"}
+              
+              - label: "Pergunta 2"
+                name: "faq2"
+                widget: "object"
+                fields:
+                  - {label: "Pergunta", name: "faq2_question", widget: "string", default: "Como posso agendar um horário?"}
+                  - {label: "Cor da Pergunta", name: "faq2_question_color", widget: "color", default: "#020202"}
+                  - {label: "Resposta", name: "faq2_answer", widget: "string", default: "Entre em contato pelo WhatsApp ou telefone."}
+                  - {label: "Cor da Resposta", name: "faq2_answer_color", widget: "color", default: "#020202"}
+              
+              - label: "Pergunta 3"
+                name: "faq3"
+                widget: "object"
+                fields:
+                  - {label: "Pergunta", name: "faq3_question", widget: "string", default: "Vocês têm eventos ao vivo?"}
+                  - {label: "Cor da Pergunta", name: "faq3_question_color", widget: "color", default: "#020202"}
+                  - {label: "Resposta", name: "faq3_answer", widget: "string", default: "Sim, sempre temos shows de rock incríveis!"}
+                  - {label: "Cor da Resposta", name: "faq3_answer_color", widget: "color", default: "#020202"}
+                  
+              - label: "Pergunta 4"
+                name: "faq4"
+                widget: "object"
+                fields:
+                  - {label: "Pergunta", name: "faq4_question", widget: "string", default: "Quais produtos estão disponíveis?"}
+                  - {label: "Cor da Pergunta", name: "faq4_question_color", widget: "color", default: "#020202"}
+                  - {label: "Resposta", name: "faq4_answer", widget: "string", default: "Temos óleos para barba, minoxidil e pomadas."}
+                  - {label: "Cor da Resposta", name: "faq4_answer_color", widget: "color", default: "#020202"}
+                  
+              - label: "Pergunta 5"
+                name: "faq5"
+                widget: "object"
+                fields:
+                  - {label: "Pergunta", name: "faq5_question", widget: "string", default: "Qual é o endereço da barbearia?"}
+                  - {label: "Cor da Pergunta", name: "faq5_question_color", widget: "color", default: "#020202"}
+                  - {label: "Resposta", name: "faq5_answer", widget: "string", default: "Estamos na R. Gen. Osório, 1402."}
+                  - {label: "Cor da Resposta", name: "faq5_answer_color", widget: "color", default: "#020202"}
+          
+          - label: "Rodapé"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Cor de Fundo", name: "footer_bg", widget: "color", default: "#020202"}
+              - {label: "Texto", name: "footer_text", widget: "string", default: "2025 La MAX. Todos os direitos reservados."}
+              - {label: "Cor do Texto", name: "footer_text_color", widget: "color", default: "#EFEB5F"}
