@@ -1,0 +1,165 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site_config"
+    label: "Site Configuration"
+    description: "Global site settings"
+    editor:
+      preview: false
+    files:
+      - name: "site_config"
+        label: "Site Configuration"
+        file: "site_config.json"
+        fields:
+          - {label: "Navigation Tab Title", name: "titulo_aba_navegacao", widget: "string"}
+          
+          # Colors Section
+          - {label: "Primary Color", name: "primary_color", widget: "color"}
+          - {label: "Secondary Color", name: "secondary_color", widget: "color"}
+          - {label: "Accent Color", name: "accent_color", widget: "color"}
+          - {label: "Text Color", name: "text_color", widget: "color"}
+          - {label: "Link Color", name: "link_color", widget: "color"}
+          - {label: "Background Color", name: "background_color", widget: "color"}
+          - {label: "Menu Background", name: "menu_background", widget: "string"}
+          - {label: "Footer Background", name: "footer_background", widget: "color"}
+          - {label: "Body Background", name: "body_background", widget: "color"}
+          
+          # Menu Configuration
+          - {label: "Menu Style", name: "menu_style", widget: "string"}
+          - {label: "Three Dots Color", name: "tres_pontinhos_cor", widget: "string"}
+          - {label: "Home Link", name: "home_link", widget: "string"}
+          - {label: "Logo Image", name: "logo_image", widget: "image"}
+          - {label: "Logo Alt Text", name: "logo_alt", widget: "string"}
+          - {label: "Logo Height", name: "logo_height", widget: "string"}
+          
+          # Menu Items
+          - {label: "Menu Item 1 Text", name: "menu_item1_text", widget: "string"}
+          - {label: "Menu Item 1 Link", name: "menu_item1_link", widget: "string"}
+          - {label: "Menu Item 1 Color", name: "menu_item1_color", widget: "color"}
+          - {label: "Menu Item 2 Text", name: "menu_item2_text", widget: "string"}
+          - {label: "Menu Item 2 Link", name: "menu_item2_link", widget: "string"}
+          - {label: "Menu Item 2 Color", name: "menu_item2_color", widget: "color"}
+          - {label: "Menu Item 3 Text", name: "menu_item3_text", widget: "string"}
+          - {label: "Menu Item 3 Link", name: "menu_item3_link", widget: "string"}
+          - {label: "Menu Item 3 Color", name: "menu_item3_color", widget: "color"}
+          
+          # Social Media
+          - {label: "Phone Link", name: "telefone_menu", widget: "string"}
+          - {label: "Facebook Link", name: "facebook", widget: "string"}
+          - {label: "Instagram Link", name: "instagram", widget: "string"}
+          - {label: "Phone Icon Color", name: "phone_icon_color", widget: "string"}
+          - {label: "Facebook Icon Color", name: "facebook_icon_color", widget: "string"}
+          - {label: "Instagram Icon Color", name: "instagram_icon_color", widget: "string"}
+          
+          # Hero Section
+          - {label: "Hero Overlay Opacity", name: "hero_overlay_opacity", widget: "string"}
+          - {label: "Hero Overlay Color", name: "hero_overlay_color", widget: "string"}
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Hero Title Color", name: "hero_title_color", widget: "color"}
+          - {label: "Hero Button Text", name: "hero_button_text", widget: "string"}
+          - {label: "Hero Button Link", name: "hero_button_link", widget: "string"}
+          - {label: "Hero Button Color", name: "hero_button_color", widget: "color"}
+          - {label: "Hero Button Border", name: "hero_button_border", widget: "color"}
+          
+          # Testimonials
+          - {label: "Testimonials BG Color", name: "testimonials_bg", widget: "color"}
+          - {label: "Testimonials Title", name: "testimonials_title", widget: "string"}
+          - {label: "Testimonials Title Color", name: "testimonials_title_color", widget: "color"}
+          
+          # Testimonial 1
+          - {label: "Testimonial 1 BG", name: "testimonial1_bg", widget: "color"}
+          - {label: "Testimonial 1 Text", name: "testimonial1_text", widget: "text"}
+          - {label: "Testimonial 1 Text Color", name: "testimonial1_text_color", widget: "color"}
+          - {label: "Testimonial 1 Name", name: "testimonial1_name", widget: "string"}
+          - {label: "Testimonial 1 Name Color", name: "testimonial1_name_color", widget: "color"}
+          
+          # Testimonial 2
+          - {label: "Testimonial 2 BG", name: "testimonial2_bg", widget: "color"}
+          - {label: "Testimonial 2 Text", name: "testimonial2_text", widget: "text"}
+          - {label: "Testimonial 2 Text Color", name: "testimonial2_text_color", widget: "color"}
+          - {label: "Testimonial 2 Name", name: "testimonial2_name", widget: "string"}
+          - {label: "Testimonial 2 Name Color", name: "testimonial2_name_color", widget: "color"}
+          
+          # Testimonial 3
+          - {label: "Testimonial 3 BG", name: "testimonial3_bg", widget: "color"}
+          - {label: "Testimonial 3 Text", name: "testimonial3_text", widget: "text"}
+          - {label: "Testimonial 3 Text Color", name: "testimonial3_text_color", widget: "color"}
+          - {label: "Testimonial 3 Name", name: "testimonial3_name", widget: "string"}
+          - {label: "Testimonial 3 Name Color", name: "testimonial3_name_color", widget: "color"}
+          
+          # Metrics Section
+          - {label: "Metrics BG Color", name: "metrics_bg", widget: "color"}
+          - {label: "Metric 1 Text", name: "metric1_text", widget: "string"}
+          - {label: "Metric 1 Text Color", name: "metric1_text_color", widget: "color"}
+          - {label: "Metric 1 Icon Color", name: "metric1_icon_color", widget: "color"}
+          - {label: "Metric 2 Text", name: "metric2_text", widget: "string"}
+          - {label: "Metric 2 Text Color", name: "metric2_text_color", widget: "color"}
+          - {label: "Metric 2 Icon Color", name: "metric2_icon_color", widget: "color"}
+          - {label: "Metric 3 Text", name: "metric3_text", widget: "string"}
+          - {label: "Metric 3 Text Color", name: "metric3_text_color", widget: "color"}
+          - {label: "Metric 3 Icon Color", name: "metric3_icon_color", widget: "color"}
+          
+          # CTA Section
+          - {label: "CTA Section BG", name: "cta_section_bg", widget: "color"}
+          - {label: "Schedule Button Text", name: "botao_agendar_text", widget: "string"}
+          - {label: "Schedule Button Link", name: "botao_agendar_link", widget: "string"}
+          - {label: "Schedule Button BG", name: "botao_agendar_bg", widget: "color"}
+          - {label: "Schedule Button Text Color", name: "botao_agendar_text_color", widget: "color"}
+          - {label: "Schedule Button Radius", name: "botao_agendar_radius", widget: "string"}
+          - {label: "Schedule Button Padding", name: "botao_agendar_padding", widget: "string"}
+          - {label: "Schedule Button Font Size", name: "botao_agendar_font_size", widget: "string"}
+          
+          # Contacts Section
+          - {label: "Contacts BG Color", name: "contacts_bg", widget: "color"}
+          - {label: "Contacts Title", name: "contacts_title", widget: "string"}
+          - {label: "Contacts Title Color", name: "contacts_title_color", widget: "color"}
+          - {label: "Contacts Text Color", name: "contacts_text_color", widget: "color"}
+          - {label: "Phone Label", name: "contact_phone_label", widget: "string"}
+          - {label: "Phone Number", name: "contact_phone", widget: "string"}
+          - {label: "WhatsApp Label", name: "contact_whatsapp_label", widget: "string"}
+          - {label: "WhatsApp Number", name: "contact_whatsapp", widget: "string"}
+          - {label: "Address Label", name: "contact_address_label", widget: "string"}
+          - {label: "Address", name: "contact_address", widget: "string"}
+          - {label: "Hours Label", name: "contact_hours_label", widget: "string"}
+          - {label: "Hours", name: "contact_hours", widget: "string"}
+          - {label: "Google Maps Embed", name: "google_maps_embed", widget: "text"}
+          
+          # Social Media Section
+          - {label: "Social BG Color", name: "social_bg", widget: "color"}
+          - {label: "Facebook Link", name: "facebook_link", widget: "string"}
+          - {label: "Facebook BG", name: "facebook_bg", widget: "color"}
+          - {label: "Facebook Icon Color", name: "facebook_icon_color", widget: "color"}
+          - {label: "Instagram Link", name: "instagram_link", widget: "string"}
+          - {label: "Instagram BG", name: "instagram_bg", widget: "color"}
+          - {label: "Instagram Icon Color", name: "instagram_icon_color", widget: "color"}
+          
+          # FAQ Section
+          - {label: "FAQ BG Color", name: "faq_bg", widget: "color"}
+          - {label: "FAQ Title", name: "faq_title", widget: "string"}
+          - {label: "FAQ Title Color", name: "faq_title_color", widget: "color"}
+          
+          # FAQ Items
+          - {label: "FAQ 1 Question", name: "faq1_question", widget: "string"}
+          - {label: "FAQ 1 Question Color", name: "faq1_question_color", widget: "color"}
+          - {label: "FAQ 1 Answer", name: "faq1_answer", widget: "text"}
+          - {label: "FAQ 1 Answer Color", name: "faq1_answer_color", widget: "color"}
+          
+          - {label: "FAQ 2 Question", name: "faq2_question", widget: "string"}
+          - {label: "FAQ 2 Question Color", name: "faq2_question_color", widget: "color"}
+          - {label: "FAQ 2 Answer", name: "faq2_answer", widget: "text"}
+          - {label: "FAQ 2 Answer Color", name: "faq2_answer_color", widget: "color"}
+          
+          - {label: "FAQ 3 Question", name: "faq3_question", widget: "string"}
+          - {label: "FAQ 3 Question Color", name: "faq3_question_color", widget: "color"}
+          - {label: "FAQ 3 Answer", name: "faq3_answer", widget: "text"}
+          - {label: "FAQ 3 Answer Color", name: "faq3_answer_color", widget: "color"}
+          
+          # Footer
+          - {label: "Footer BG Color", name: "footer_bg", widget: "color"}
+          - {label: "Footer Text", name: "footer_text", widget: "string"}
+          - {label: "Footer Text Color", name: "footer_text_color", widget: "color"}
